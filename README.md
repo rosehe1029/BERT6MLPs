@@ -16,7 +16,7 @@ Try in [Google Colab](https://colab.research.google.com/drive/1-wTNA-qYmOBdSYG7s
 requires python >= 3.5 and pytorch >= 0.4.1
 
 ```bash
-git clone -b master https://github.com/charles9n/bert-sklearn
+git clone -b master https://github.com/.....
 cd bert-sklearn
 pip install .
 ```

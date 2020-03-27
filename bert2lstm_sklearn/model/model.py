@@ -99,15 +99,11 @@ class BertPlusMLP(BertPreTrainedModel):
         else:
             output = pooled_output
             output = self.dropout(output)
-
+            print('before mlp :',output.size())
         output = self.mlp(output)
         #自己加的
-        output=self.mlp(output)
-        output=self.mlp(output)
-        output=self.mlp(output)
-        output=self.mlp(output)
-        output=self.mlp(output)
-        output=self.mlp(output)
+        print(output.size())
+
 
         if labels is not None:
             if self.model_type == "text_classifier":
