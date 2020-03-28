@@ -99,10 +99,13 @@ class BertPlusMLP(BertPreTrainedModel):
         else:
             output = pooled_output
             output = self.dropout(output)
-            print('before mlp :',output.size())
+            print('before mlp :',output.shape)
+            print(output)
         output = self.mlp(output)
         #自己加的
-        print(output.size())
+        print('after mlp...........')
+        print(output.shape)
+        print(output)
 
 
         if labels is not None:
