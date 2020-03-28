@@ -70,7 +70,7 @@ def sst2_test_data(train_file=DATADIR + '/sst2/train.tsv',
 
 def test_bert_sklearn_accy():
     """
-    Test bertlstm_sklearn accuracy
+    Test bert2 accuracy
     compare against  huggingface run_classifier.py 
     on 200 rows of SST-2 data.
     """
@@ -114,7 +114,7 @@ def test_bert_sklearn_accy():
     accy = open("comptest/eval_results.txt").read().split("\n")[0] # 'acc = 0.76'
     accy = accy.split("=")[1]
     accy = float(accy)
-    print("bertlstm_sklearn accy: %.02f, run_classifier.py accy : %0.02f"%(bert_sklearn_accy, accy))
+    print("bert2 accy: %.02f, run_classifier.py accy : %0.02f"%(bert_sklearn_accy, accy))
 
     # clean up 
     print("\nCleaning up eval file: eval_results.txt")
