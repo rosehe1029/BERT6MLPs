@@ -154,7 +154,7 @@ class BaseBertEstimator(BaseEstimator):
                  eval_batch_size=8, learning_rate=2e-5, warmup_proportion=0.1,
                  gradient_accumulation_steps=1, fp16=False, loss_scale=0,
                  local_rank=-1, use_cuda=True, random_state=42,
-                 validation_fraction=0.1, logfile='bert2.log',
+                 validation_fraction=0.1, logfile='bert3.log',
                  ignore_label=None):
 
         self.id2label, self.label2id = {}, {}
