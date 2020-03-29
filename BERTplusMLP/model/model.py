@@ -106,7 +106,13 @@ class BertPlusMLP(BertPreTrainedModel):
         print('after mlp...........')
         print(output.shape)
         print(output)
-
+        sizeh_0=output.shape[1]
+        lstm=nn.LSTM(input_size= output.shape[0],hidden_size= 20,num_layers=2 )
+        output=torch.unsqueeze(output,3)
+        h_0=torch(2,sizeh_0 ,20)
+        h0=(h_0,h_0)
+        output,h_n=lstm(output)
+        output=torch.squeeze(output)
 
         if labels is not None:
             if self.model_type == "text_classifier":
