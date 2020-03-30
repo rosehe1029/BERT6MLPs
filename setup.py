@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 
 setup(
-    name="BERTplusLSTM",
+    name="BERTss",
     version="0.3.1",
     author="charles_nainan",
     author_email="charles.j.9n@gmail.com",
